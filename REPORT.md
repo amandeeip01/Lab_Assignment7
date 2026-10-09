@@ -15,6 +15,9 @@ file, return the **10 closest locations** of a requested category that lie insid
   (e.g. one step can be 0.010101 or 0.010102). This matters for tie-breaking (Section 4.3).
 
 ## 3. API
+**Live deployment:** https://nearest-locations.onrender.com/search/  ·  Web UI: https://nearest-locations.onrender.com/ui
+(free Render instance, so the first request after it has been idle can take ~50 s)
+
 **Route:** `/search/` (GET or POST)
 
 | Field | Meaning |
@@ -30,7 +33,7 @@ filename that is on the server. If `link` is missing, the API falls back to a fu
 
 Example:
 ```
-curl -X POST https://<host>/search/ -F lat=0.5 -F long=0.5 -F cat=bank -F rad=0.2 -F link=@sample_link.txt
+curl -X POST https://nearest-locations.onrender.com/search/ -F lat=0.5 -F long=0.5 -F cat=bank -F rad=0.2 -F link=@sample_link.txt
 ```
 Response:
 ```json
@@ -43,6 +46,8 @@ Response:
 A small web page is served at **`/ui`**. It has a form for `lat`, `long`, `cat`, `rad`, and an optional
 link-file upload. It calls `/search/` and shows the 10 results in a table and on a 1 × 1 map
 with the current position and the search circle. You can click the map to set the current position.
+
+![Web UI](docs/ui_screenshot.jpg)
 
 ## 4. Method
 
