@@ -1,5 +1,9 @@
 # Lab Assignment 7 – Nearest Location Recommender over a Road Network
 
+> **API Link:** <https://nearest-locations.onrender.com/search/>  
+> **Web UI:** <https://nearest-locations.onrender.com/ui>  
+> **GitHub Repository:** <https://github.com/amandeeip01/Lab_Assignment7>
+
 ## 1. Problem
 Given 10,000 locations (`ID, Latitude, Longitude, Category`) on a 1 × 1 grid, and a road-linkage
 file, return the **10 closest locations** of a requested category that lie inside a search radius.
